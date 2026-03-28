@@ -1,61 +1,97 @@
 <!DOCTYPE html>
 <html lang="ne">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stone Care</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Care - Natural Solution</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header class="header">
     <div class="container nav">
-        <img src="images/logo.png" class="logo">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
         <button class="order-btn" onclick="orderNow()">Order Now</button>
     </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-    <h1>
-        ⚠️ यदि <span>अल्ट्रासाउन्ड रिपोर्टमा पत्थरी देखियो</span> भने <br>
-        र डाक्टरले <span>शल्यक्रिया सुझाव दिन्छन्</span> भने -
-    </h1>
-</section>
-
-<section class="products">
-    <img src="images/product1.png">
-    <img src="images/product2.png">
-</section>
-
-<section class="pricing">
-    <div class="price-box">
-        <span class="old">₹7000</span>
-        <span class="new">₹4000</span>
-        <p>Limited Offer</p>
-        <button onclick="orderNow()">Order Now</button>
+    <div class="container">
+        <h1>
+            ⚠️ यदि <span>अल्ट्रासाउन्ड रिपोर्टमा पत्थरी देखियो</span> भने <br>
+            र डाक्टरले <span>शल्यक्रिया सुझाव दिन्छन्</span> भने -
+        </h1>
+        <p class="subtext">अब प्राकृतिक समाधान अपनाउनुहोस्</p>
     </div>
 </section>
 
-<!-- VIDEO SLIDER -->
-<section class="testimonials">
-    <h2>Customer Reviews</h2>
+<!-- PRODUCTS -->
+<section class="products">
+    <div class="container product-grid">
+        <div class="product-card">
+            <img src="images/product1.png">
+            <h3>Stone Crash Powder</h3>
+        </div>
 
-    <div class="slider" id="slider">
-        <div class="track">
-
-            <div class="slide"><video src="videos/video1.mp4" controls></video></div>
-            <div class="slide active"><video src="videos/video2.mp4" controls></video></div>
-            <div class="slide"><video src="videos/video3.mp4" controls></video></div>
-
+        <div class="product-card">
+            <img src="images/product2.png">
+            <h3>Stone Go Capsules</h3>
         </div>
     </div>
 </section>
 
-<section class="disclaimer">
-    Disclaimer: Results may vary. Consult doctor before use.
+<!-- PRICING -->
+<section class="pricing">
+    <div class="container">
+        <h2>Limited Time Offer</h2>
+
+        <div class="price-box">
+            <span class="old-price">₹7000</span>
+            <span class="new-price">₹4000</span>
+            <p class="save">Save ₹3000 Today</p>
+
+            <button class="cta-btn" onclick="orderNow()">Order Now</button>
+        </div>
+    </div>
 </section>
+
+<!-- TESTIMONIAL VIDEO SLIDER -->
+<section class="testimonials">
+    <h2>Customer Video Reviews</h2>
+
+    <div class="slider">
+        <button class="nav-btn left" onclick="slide(-1)">❮</button>
+
+        <div class="slides">
+            <video src="videos/video1.mp4" controls></video>
+            <video src="videos/video2.mp4" controls class="active"></video>
+            <video src="videos/video3.mp4" controls></video>
+        </div>
+
+        <button class="nav-btn right" onclick="slide(1)">❯</button>
+    </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section class="disclaimer">
+    <div class="container">
+        <p>
+            Disclaimer: This product is based on Ayurvedic principles and is not intended to diagnose, treat, cure, or prevent any disease. 
+            Results may vary from person to person. Please consult your healthcare professional before use.
+        </p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2026 Stone Care | All Rights Reserved</p>
+</footer>
 
 <script src="script.js"></script>
 
