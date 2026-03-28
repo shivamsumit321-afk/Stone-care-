@@ -9,6 +9,9 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background: #f8f9fa;
     color: #333;
+
+    /* Prevent content hiding under fixed header */
+    padding-top: 80px;
 }
 
 /* CONTAINER */
@@ -18,11 +21,22 @@ body {
     margin: auto;
 }
 
-/* HEADER */
+/* HEADER (STICKY) */
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background: #ffffff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
     padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.header.scrolled {
+    padding: 8px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
 .nav {
@@ -33,9 +47,14 @@ body {
 
 .logo img {
     height: 55px;
+    transition: 0.3s;
 }
 
-/* BUTTON (3D EFFECT) */
+.header.scrolled .logo img {
+    height: 45px;
+}
+
+/* 3D BUTTON */
 .order-btn {
     background: linear-gradient(145deg, #28a745, #1e7e34);
     color: #fff;
@@ -45,7 +64,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     box-shadow: 0 6px #145c26;
-    transition: 0.2s;
+    transition: all 0.2s ease;
 }
 
 .order-btn:active {
