@@ -14,9 +14,8 @@
 <header class="header">
     <div class="container nav">
         <div class="logo">
-            <img src="1000034160.png" alt="Logo">
+            <img src="images/logo.png" alt="Logo">
         </div>
-
         <button class="order-btn" onclick="orderNow()">Order Now</button>
     </div>
 </header>
@@ -35,23 +34,57 @@
 <!-- PRODUCTS -->
 <section class="products">
     <div class="container product-grid">
-
-        
-
         <div class="product-card">
-            <img src="IMG_20260328_120114_e.png" alt="Most seeling combo in india">
-            <h3>India's most seeling combo</h3>
+            <img src="images/product1.png">
+            <h3>Stone Crash Powder</h3>
         </div>
 
+        <div class="product-card">
+            <img src="images/product2.png">
+            <h3>Stone Go Capsules</h3>
+        </div>
     </div>
 </section>
 
-<!-- DESCRIPTION -->
-<section class="description">
+<!-- PRICING -->
+<section class="pricing">
     <div class="container">
-        <h2>100% Natural Kidney & Gallbladder Stone Solution</h2
+        <h2>Limited Time Offer</h2>
 
-        <button class="cta-btn" onclick="orderNow()">Order Now</button>
+        <div class="price-box">
+            <span class="old-price">₹7000</span>
+            <span class="new-price">₹4000</span>
+            <p class="save">Save ₹3000 Today</p>
+
+            <button class="cta-btn" onclick="orderNow()">Order Now</button>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIAL VIDEO SLIDER -->
+<section class="testimonials">
+    <h2>Customer Video Reviews</h2>
+
+    <div class="slider">
+        <button class="nav-btn left" onclick="slide(-1)">❮</button>
+
+        <div class="slides">
+            <video src="videos/video1.mp4" controls></video>
+            <video src="videos/video2.mp4" controls class="active"></video>
+            <video src="videos/video3.mp4" controls></video>
+        </div>
+
+        <button class="nav-btn right" onclick="slide(1)">❯</button>
+    </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section class="disclaimer">
+    <div class="container">
+        <p>
+            Disclaimer: This product is based on Ayurvedic principles and is not intended to diagnose, treat, cure, or prevent any disease. 
+            Results may vary from person to person. Please consult your healthcare professional before use.
+        </p>
     </div>
 </section>
 
